@@ -1,2 +1,2 @@
 # Retro-Snake-WebApp
-vintage snake game with leader board connected with sever 
+Vintage snake game with leader board connected with sever 
