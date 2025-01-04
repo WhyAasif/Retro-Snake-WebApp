@@ -1,0 +1,211 @@
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin: 0;
+  font-family: "VT323", serif;
+}
+body,
+.snake {
+  background-color: #414141;
+}
+
+#game-board {
+  border-radius: 100px;
+  display: grid;
+  grid-template-columns: repeat(20, 3.5vw);
+  grid-template-rows: repeat(20, 3.5vw);
+  margin: 1vw;
+  
+}
+
+.game-border-1 {
+  border: #595f43 solid 2vw;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 10px #595f43;
+}
+.game-border-2 {
+  border: #abb78a solid 2vw;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px #abb78a;
+}
+.game-border-3 {
+  border: #8b966c solid 7vw;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1vw #8b966c;
+}
+
+#instruction-text {
+  position: absolute;
+  top: 33vh;
+  color: #333;
+  width: 56vw;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 5vw;
+  font-size: 6vw;
+  margin: 0;
+  z-index: 1;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+}
+
+#score {
+  color: #abb78a;
+}
+
+#score,
+#highScore {
+  font-size: 12vw;
+  font-weight: bolder;
+  margin: 1vw 1vw;
+}
+
+#highScore {
+  color: #d8ddca;
+  display: none;
+}
+
+.game-border-3 {
+  background-color: #c4cfa3;
+}
+
+.snake {
+  border: #5a5a5a 1px dotted;
+}
+
+.food {
+  background-color: #dedede;
+  border: #999 5px solid;
+}
+
+#logo {
+  position: absolute;
+  height: 23vh;
+  top: 13vh;
+}
+
+.controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vw;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 12vw);
+  grid-template-rows: repeat(3, 12vw);
+  gap: 1vw;
+}
+
+.up {
+  grid-column: 2;
+  grid-row: 1;
+}
+.down {
+  grid-column: 2;
+  grid-row: 3;
+  transform: rotate(180deg);
+}
+.left {
+  grid-column: 1;
+  grid-row: 2;
+  transform: rotate(270deg);
+}
+.right {
+  grid-column: 3;
+  grid-row: 2;
+
+  transform: rotate(90deg);
+}
+.square {
+  grid-column: 2;
+  grid-row: 2;
+  background: #abb78a url("snake (2).png") no-repeat center / 70% !important;
+}
+
+.buttons {
+  background-image: url("up.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 10px;
+  background-color: #abb78a;
+  border: #303713 solid 3px;
+  box-shadow: 0 0 1vw black inset;
+}
+button:active {
+  border: #303713 solid 2px;
+}
+
+.leaderboard-container {
+  margin: 40px auto;
+  width: 80vw;
+}
+
+.Hscore {
+  font-size: 2em;
+  margin: auto;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #c0c0c0;
+  border-radius: 3px;
+  box-shadow: 0 0 1vw rgb(255, 255, 255) inset;
+}
+
+table {
+  width: 100%;
+  font-size: 1.2em;
+}
+
+thead th {
+  font-size: 1.2em;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 2px black;
+}
+
+td {
+  font-size: 0.9em;
+  text-align: center;
+  color: #c0c0c0;
+  text-shadow: 0px 0px 1px black;
+}
+
+
+#name-input-container {
+  display: none;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2;
+  
+}
+#submit-name {
+ 
+  text-align: center;
+  font-size: 1.2em;
+  background:  #8b966c;
+  border: #000000 solid 2px;
+  border-radius: 4px;
+  font-family: "VT323", serif;
+  text-transform: uppercase;
+  display: block;
+  margin: 15px auto 0;
+}
+#submit-name:active {
+  font-size: 1.4em;
+  border: none;
+}
